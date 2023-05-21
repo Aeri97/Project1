@@ -46,9 +46,35 @@ public class App
      //   {
      //       System.out.println(product);
      //   }
+     
+     
+        // TO GET THE PRODUCTS AT PARTICULAR PLACE
+        
         
         List<Product> prod = service.getProductWithPlace("White Table");
         for(Product product : prod)
         {
             System.out.println(product);
        }
+       
+       
+       //THIS CODE IS USED FOR STREAM API INSTEAD OF ABOVE CODE
+       
+       
+         service.getProductWithPlace("White Table").forEach(System.out::println);
+
+
+   // TO GET THE PRODUCTS OUT OF WARRANTY
+   
+       List<Product> prd = service.getProductWithWarranty();
+       for(Product product : prd)
+        {
+            System.out.println(product);
+        }
+
+    }
+
+
+    }
+
+
